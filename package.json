@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.iu.edu/thrclark/IUNotify-prototype/issues"
   },
-  "homepage": "https://github.iu.edu/thrclark/IUNotify-prototype/blob/development/README.md",
+  "homepage": "https://github.com/thrclark/polson/blob/master/README.md",
   "dependencies": {
     "bootstrap": "4.3.1",
     "font-awesome": "4.7",
@@ -25,9 +25,5 @@
     "popper.js": "^1.14.3",
     "prismjs": "^1.11.0",
     "simplemde": "^1.11.2"
-  },
-  "devDependencies": {
-    "rivet-bootstrap": "1.4.0-0",
-    "rivet-uits": "^1.1.0"
   }
 }
