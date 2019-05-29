@@ -1,5 +1,5 @@
 # file: ~/.gitignore_global
 .DS_Store
 .idea
-
+.sass-cache/
 node_modules/
