@@ -1,0 +1,33 @@
+{
+  "name": "Polson",
+  "version": "1.0.0",
+  "description": "Bruce Polson Website",
+  "main": "index.js",
+  "scripts": {
+    "scss": "node-sass --watch scss -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thrclark/polson"
+  },
+  "author": "Tom Clark",
+  "license": "",
+  "bugs": {
+    "url": "https://github.iu.edu/thrclark/IUNotify-prototype/issues"
+  },
+  "homepage": "https://github.iu.edu/thrclark/IUNotify-prototype/blob/development/README.md",
+  "dependencies": {
+    "bootstrap": "4.3.1",
+    "font-awesome": "4.7",
+    "jquery": "^3.3.1",
+    "node-sass": "^4.9.1",
+    "paginationjs": "^2.1.4",
+    "popper.js": "^1.14.3",
+    "prismjs": "^1.11.0",
+    "simplemde": "^1.11.2"
+  },
+  "devDependencies": {
+    "rivet-bootstrap": "1.4.0-0",
+    "rivet-uits": "^1.1.0"
+  }
+}
