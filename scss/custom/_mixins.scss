@@ -9,5 +9,10 @@
 
 // Font Mixins
 @mixin body-font {
+  font-family: 'Rasa', serif;
+}
+
+
+@mixin header-font {
   font-family: 'Dosis', sans-serif;
 }
