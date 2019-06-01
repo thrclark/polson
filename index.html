@@ -82,13 +82,23 @@
 </section>
 
 <!-- Calendar -->
+
 <section class="content-section text-dark text-center" id="calendar">
     <div class="container">
+       
         <div class="content-section-heading">
             <h2 class="mb-5">Calendar</h2>
         </div>
-        <div class="my-3 p-3 bg-white text-left">
+        <div class="my-3 p-3 bg-white text-left" id="calendardata">
+        
+        
+        
+        
             <h6 class="border-bottom border-gray pb-2 mb-0">Upcoming events</h6>
+            
+            
+            
+            
             <div class="media text-muted pt-3">
                 <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray"> <strong class="d-block">June 16th, 2019</strong> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. </p>
             </div>
@@ -153,6 +163,40 @@
 <script src="js/jquery.easing.min.js"></script> 
 
 <!-- Custom scripts for this template --> 
-<script src="js/stylish-portfolio.min.js"></script>
+<script src="js/stylish-portfolio.min.js"></script> 
+
+<!-- Load data from Google sheets --> 
+<script src="js/tabletop.js"></script> 
+<script type="text/javascript">
+      var public_spreadsheet_url = 'https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=1yVt11Ea-T9D3O1wz9QaCduLzNMk3zyhyRjhtrN2Fpjk&output=html';
+
+      $(document).ready( function() {
+        Tabletop.init( { key: public_spreadsheet_url,
+                         callback: showInfo,
+                         wanted: [ "Calendar", ],
+                         debug: true } )
+      })
+        
+      function showInfo(data, tabletop) {
+       
+       
+
+        $.each( tabletop.sheets("Calendar").all(), function(i, calendar) {
+          var cat_li = $('<div class="border-bottom mb-3">' + '<h4>' + calendar.date + '</h4>' + '</div>')
+          //cat_li.append(calendar.description);
+          cat_li.append("<p>" + calendar.description + "</p>");
+          cat_li.appendTo("#calendardata");
+        })
+      }
+
+     // document.write("The published spreadsheet is located at <a target='_new' href='" + public_spreadsheet_url + "'>" + public_spreadsheet_url + "</a>");    
+    </script>
 </body>
 </html>
+
+
+  <!--'<div class="media text-muted pt-3">' + '<p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">' + '<strong class="d-block">'-->
+
+
+
+
