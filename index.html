@@ -47,7 +47,7 @@
     <div class="container text-center">
         <div class="row">
             <div class="col-lg-10 mx-auto">
-                <h1>About</h1>
+                <h1 class="mb-5">About</h1>
                 <p class="mb-5">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
                 <a class="btn btn-dark js-scroll-trigger" href="#services">Services</a> </div>
         </div>
@@ -85,39 +85,10 @@
 
 <section class="content-section text-dark text-center" id="calendar">
     <div class="container">
-       
         <div class="content-section-heading">
             <h2 class="mb-5">Calendar</h2>
         </div>
-        <div class="my-3 p-3 bg-white text-left" id="calendardata">
-        
-        
-        
-        
-            <h6 class="border-bottom border-gray pb-2 mb-0">Upcoming events</h6>
-            
-            
-            
-            
-            <div class="media text-muted pt-3">
-                <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray"> <strong class="d-block">June 16th, 2019</strong> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. </p>
-            </div>
-            <div class="media text-muted pt-3">
-                <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray"> <strong class="d-block">June 23, 2019</strong> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. </p>
-            </div>
-            <div class="media text-muted pt-3">
-                <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray"> <strong class="d-block">June 25, 2019</strong> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. </p>
-            </div>
-            <div class="media text-muted pt-3">
-                <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray"> <strong class="d-block">July 16th, 2019</strong> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. </p>
-            </div>
-            <div class="media text-muted pt-3">
-                <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray"> <strong class="d-block">July 23, 2019</strong> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. </p>
-            </div>
-            <div class="media text-muted pt-3">
-                <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray"> <strong class="d-block">July 25, 2019</strong> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. </p>
-            </div>
-        </div>
+        <div class="my-3 p-3 bg-white text-left" id="calendardata"> </div>
     </div>
     </div>
 </section>
@@ -182,9 +153,9 @@
        
 
         $.each( tabletop.sheets("Calendar").all(), function(i, calendar) {
-          var cat_li = $('<div class="border-bottom mb-3">' + '<h4>' + calendar.date + '</h4>' + '</div>')
+          var cat_li = $('<div class="border-bottom mb-3">' + '<div class="font-weight-bold">' + calendar.date + '</div>' + '</div>')
           //cat_li.append(calendar.description);
-          cat_li.append("<p>" + calendar.description + "</p>");
+          cat_li.append("<div class='small mb-3 text-muted'>" + calendar.description + "</div>");
           cat_li.appendTo("#calendardata");
         })
       }
@@ -194,9 +165,4 @@
 </body>
 </html>
 
-
-  <!--'<div class="media text-muted pt-3">' + '<p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">' + '<strong class="d-block">'-->
-
-
-
-
+<!--'<div class="media text-muted pt-3">' + '<p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">' + '<strong class="d-block">'-->
