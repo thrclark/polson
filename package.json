@@ -23,7 +23,7 @@
     "node-sass": "^4.9.1",
     "paginationjs": "^2.1.4",
     "popper.js": "^1.14.3",
-    "prismjs": "^1.11.0",
+    "prismjs": "^1.23.0",
     "simplemde": "^1.11.2"
   }
 }
